@@ -1,0 +1,70 @@
+// small screen mixin
+@mixin phone{
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li{
+    float: left;
+    a{
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 18px 20px;
+        text-decoration: none;
+    }
+    a:hover{
+        background-color: #111;
+    }
+}
+
+.grid{
+    margin: 30px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-evenly;
+
+    @include phone(){
+        display: block;
+    }
+}
+
+.column{
+    
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    // background: radial-gradient(circle, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%);
+    @include phone(){
+        display: block;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+
+.column_img{
+
+    height: 100%; 
+    width: 100%; 
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scallop {
+    border: var(--corner) solid;
+    border-image-source: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" fill="black"><path d="M2 0H1C1 .6.6 1 0 1v1c.6 0 1 .4 1 1h1c0-.6.4-1 1-1V1a1 1 0 0 1-1-1Z"/></svg>');
+    border-image-slice: 1 fill;
+  }

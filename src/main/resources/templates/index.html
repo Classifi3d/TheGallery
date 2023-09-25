@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" th:href="@{/img/icon.png}" href="../static/img/icon.png">
+    <link rel="stylesheet"  media="screen" th:href="@{/css/style.css}" href="../static/css/style.css">
+    <link rel="stylesheet"  th:href="@{/css/frame.css}"  href="../static/css/frame.css">
+    <link rel="stylesheet"  th:href="@{/css/picture_zoom.css}"  href="../static/css/picture_zoom.css">
+    <script type="text/javascript" th:src="@{/js/image_zoom.js}" src="../static/js/image_zoom.js" defer></script>
+    <script type="text/javascript" th:src="@{/js/requests.js}" src="../static/js/requests.js" defer></script>
+
+    <style th:inline="text">
+        body{
+            background-image: 
+            linear-gradient(to bottom, rgb(215, 215, 215,0.55), rgb(135, 135, 135,0.55)), 
+            url('../img/background.png');
+        }
+    </style>
+
+    <title>The Gallery</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="default.asp">Artistle</a></li>
+            <li><a href="news.asp">The Gallery</a></li>
+            <li><a href="contact.asp">Information</a></li>
+            <li><a href="about.asp">About</a></li>
+        </ul>
+    </header>
+    <main>
+<!--        <img class="column_img" id="zoomedImage" th:src="@{/img/images/Titian/Titian_12.jpg}">-->
+                       
+        <!-- <button type="button" onclick="RandomArtistsGET(9)">Click Me!</button> -->
+        <div class="grid">
+            <div class="column">
+                <div class="picture-click">
+                <div class="outerBevel">
+                    <div class="flatSurface">
+                        <div class="innerBevel">
+                            <img id="zoomedImage1" onclick="zoomImage1('zoomedImage1')" class="column_img">
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="scallop"></div>
+                <div class="outerBevel">
+                    <div class="flatSurface">
+                        <div class="innerBevel">
+                            <img id="zoomedImage2" onclick="zoomImage2()" class="column_img">
+                        </div>
+                    </div>
+                </div>
+                <div class="outerBevel">
+                    <div class="flatSurface">
+                        <div class="innerBevel">
+                            <img id="zoomedImage3" onclick="zoomImage3()" class="column_img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="outerBevel">
+                    <div class="flatSurface">
+                        <div class="innerBevel">
+                            <img id="zoomedImage4" onclick="zoomImage4()" class="column_img" >    
+                        </div>
+                    </div>
+                </div>
+                <div class="outerBevel">
+                    <div class="flatSurface">
+                        <div class="innerBevel">
+                            <img id="zoomedImage5" onclick="zoomImage5()" class="column_img" >
+                        </div>
+                    </div>
+                </div>
+                <div class="outerBevel">
+                    <div class="flatSurface">
+                        <div class="innerBevel">
+                            <img id="zoomedImage6" onclick="zoomImage6()" class="column_img" >
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="outerBevel">
+                    <div class="flatSurface">
+                        <div class="innerBevel">
+                            <img class="column_img" src="https://d1c96a4wcgziwl.cloudfront.net/cb69Andrea_Verrocchio_Baptism_of_Christ.jpg">
+                        </div>
+                    </div>
+                </div> -->
+            </div> 
+
+            <div class="column">
+                <div class="outerBevel">
+                    <div class="flatSurface">
+                        <div class="innerBevel">
+                            <img id="zoomedImage7" onclick="zoomImage7()" class="column_img" >
+                        </div>
+                    </div>
+                </div>
+                <div class="outerBevel">
+                    <div class="flatSurface">
+                        <div class="innerBevel">
+                            <img id="zoomedImage8" onclick="zoomImage8()" class="column_img" >
+                        </div>
+                    </div>
+                </div>
+                <div class="outerBevel">
+                    <div class="flatSurface">
+                        <div class="innerBevel">
+                            <img id="zoomedImage9" onclick="zoomImage9()" class="column_img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+</html>

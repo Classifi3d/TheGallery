@@ -1,0 +1,42 @@
+$background-color_1: rgb(255,249,224);
+$border-color_1: rgb(109, 84, 58) rgb(24, 19, 13) rgb(24, 19, 13) rgb(109, 84, 58);
+$border-color_2: rgb(24, 19, 13) rgb(109, 84, 58) rgb(109, 84, 58) rgb(24, 19, 13);
+$border-color_3: rgb(207, 166, 0) rgb(207, 166, 0) rgb(145, 110, 0) rgb(145, 110, 0);
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+figure {
+	width: 545px;
+	height: 500px;
+	margin: 1em auto;
+}
+.outerBevel {
+	margin-top: 25px;
+    margin-bottom: 50px;
+	box-shadow: 4px 6px 12px 0 black;
+	border-width: 5px;
+	border-style: solid;
+	border-color: $border-color_1;
+}
+.flatSurface {
+	border: 12px solid rgb(65, 40, 16);
+}
+.innerBevel {
+	border-width: 5px;
+	border-style: solid;
+	border-color: $border-color_2;
+}
+.map {
+	display: block;
+	clear: both;
+	height: 100%;
+	width: 100%;
+	padding: 7.5% 7.5% 10% 7.5%;
+	background-color: $background-color_1;
+	border-width: 3px;
+	border-style: solid;
+	border-color: $border-color_3;
+}
